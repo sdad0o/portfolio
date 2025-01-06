@@ -9,11 +9,11 @@
 	--text-color-second: rgb(68, 68, 68);
 	--text-color-third: rgb(30, 159, 171);
 
-	--first-color: rgb(110, 87, 224);
-	--first-color-hover: rgb(40, 91, 212);
+	--first-color: #222831;
+	--first-color-hover: #393E46;
 
-	--second-color: rgb(0, 201, 255);
-	--third-color: rgb(192, 166, 49);
+	--second-color: #00ADB5;
+	--third-color: rgb(255, 208, 0);
 	--first-shadow-color: rgba(0, 0, 0, 0.1);
 
 }
@@ -575,10 +575,10 @@ footer {
 	background: #F8F8F8;
 	padding-block: 40px 60px;
 }
-
-.top-footer p {
-	font-size: 25px;
-	font-weight: 600;
+.top-footer{
+	display: grid;
+	place-items: center;
+	text-align: center;
 }
 
 .middle-footer .footer-menu {
@@ -748,29 +748,8 @@ footer {
 .project-title
 {
 	text-align: center;
+	font-size: 15px;
 }
-.badge {
-	display: flex;
-	padding: 5px 12px;
-	margin: 5px;
-	font-size: 9px;
-	font-weight: 600;
-	color: white;
-	background: #007bff;
-	/* Blue badge color */
-	border-radius: 12px;
-	/* Rounded corners */
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-	transition: transform 0.2s ease-in-out;
-}
-
-.badge:hover {
-	transform: scale(1.1);
-	background: #ffffff;
-}
-
 .project-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -826,7 +805,7 @@ footer {
 }
 
 .project-title {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: bold;
 	margin-bottom: 10px;
 	color: #333;
@@ -852,4 +831,38 @@ footer {
 
 .project-button:hover {
 	background: #0056b3;
+}
+
+.animation
+{
+	text-align: center;
+	width: 100%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.h1{
+	font-size: 2.3em;
+		letter-spacing: -2px;
+		font-weight: 500;
+		color: var(--second-color);
+		text-align: center;
+}
+.cssanimation,
+.cssanimation span {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	text-align: center;
+}
+
+.cssanimation span {
+	display: inline-block
+}
+
+.hu__hu__ {
+	animation: hu__hu__ infinite 2s ease-in-out
+}
+
+@keyframes hu__hu__ {
+	50% {
+		transform: translateY(15px)
+	}
 }

@@ -363,6 +363,7 @@ h3 {
 	text-align: center;
 	font-size: 15px;
 	color: #777;
+	margin-bottom: 10px;
 }
 
 .about-btn button {
@@ -723,4 +724,15 @@ footer {
 	.input-field {
 		width: 100%;
 	}
+}
+.social-links
+{
+	text-decoration: none;
+	color: inherit;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	cursor: pointer;
 }

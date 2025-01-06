@@ -745,40 +745,17 @@ footer {
 	outline: none;
 	cursor: pointer;
 }
-.project-title
-{
-	text-align: center;
-	font-size: 15px;
-}
 .project-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	/* Centers the cards */
-	gap: 20px;
-	/* Space between cards */
-	padding: 20px;
-}
-
-.project-container>div {
-	flex: 1 1 calc(33.33% - 20px);
-	/* Each card takes up 1/3 of the row with spacing */
-	max-width: 350px;
-	/* Prevents the cards from becoming too large */
-	box-sizing: border-box;
-}
-/* Project Section Styling */
-.project-container {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
 	gap: 20px;
 	padding: 20px;
 }
 
-/* Individual Card Styling */
 .project-card {
-	width: 300px;
+	flex: 1 1 calc(33.33% - 20px);
+	max-width: 350px;
 	border-radius: 15px;
 	overflow: hidden;
 	background-color: white;
@@ -790,15 +767,11 @@ footer {
 	transform: translateY(-10px);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
-/* Image Styling */
 .project-image {
 	width: 100%;
 	height: 200px;
 	object-fit: cover;
 }
-
-/* Card Content Styling */
 .card-content {
 	padding: 20px;
 	text-align: center;
@@ -807,7 +780,6 @@ footer {
 .project-title {
 	font-size: 1.2rem;
 	font-weight: bold;
-	margin-bottom: 10px;
 	color: #333;
 }
 
@@ -816,8 +788,6 @@ footer {
 	color: #555;
 	margin-bottom: 20px;
 }
-
-/* Button Styling */
 .project-button {
 	padding: 10px 20px;
 	border: none;
@@ -833,19 +803,38 @@ footer {
 	background: #0056b3;
 }
 
-.animation
-{
+@media (max-width: 768px) {
+	.project-card {
+		flex: 1 1 calc(50% - 20px);
+	}
+}
+@media (max-width: 480px) {
+	.project-card {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
+}
+.top-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+.animation {
 	text-align: center;
 	width: 100%;
-	transform: translateX(-50%) translateY(-50%);
 }
-.h1{
+.h1 {
 	font-size: 2.3em;
-		letter-spacing: -2px;
-		font-weight: 500;
-		color: var(--second-color);
-		text-align: center;
+	letter-spacing: -2px;
+	font-weight: 500;
+	color: var(--second-color);
+	text-align: center;
 }
+
+/* Animation Effects */
 .cssanimation,
 .cssanimation span {
 	animation-duration: 1s;
@@ -853,16 +842,31 @@ footer {
 	text-align: center;
 }
 
+/* Split Animation for Each Letter */
 .cssanimation span {
-	display: inline-block
+	display: inline-block;
+	animation: fadeInUp 1s ease-in-out forwards;
+	opacity: 0;
+	transform: translateY(20px);
 }
 
 .hu__hu__ {
-	animation: hu__hu__ infinite 2s ease-in-out
+	animation: hu__hu__ infinite 2s ease-in-out;
 }
 
 @keyframes hu__hu__ {
 	50% {
-		transform: translateY(15px)
+		transform: translateY(15px);
+	}
+}
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
